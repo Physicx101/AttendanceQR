@@ -52,6 +52,7 @@ class HomeViewModel: BaseViewModel(), LifecycleObserver {
     fun getUserData(userId: String) {
         getUserNIU(userId)
         getUserPhone(userId)
+        getUserRole(userId)
     }
 
     fun sendAbsen(absen: Absen) {
@@ -68,6 +69,21 @@ class HomeViewModel: BaseViewModel(), LifecycleObserver {
         )
     }
 
+    private fun getUserRole(userId: String) {
+        compositeDisposable.add(
+            auth.getUserRole(userId)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    state.value = state.value!!.copy(userRole = it)
+                    state.value = state.value!!.copy(initialLoading = false)
+                    Log.d("USER", state.value.toString())
+                }, {
+                    Log.e("NOM", it.message)
+                })
+        )
+    }
+
     private fun getUserNIU(userId: String) {
         compositeDisposable.add(
             auth.getUserNIU(userId)
@@ -75,6 +91,7 @@ class HomeViewModel: BaseViewModel(), LifecycleObserver {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     state.value = state.value!!.copy(userNIU = it)
+                    state.value = state.value!!.copy(initialLoading = false)
                     Log.d("USER", state.value.toString())
                 }, {
                     Log.e("NOM", it.message)
@@ -89,6 +106,7 @@ class HomeViewModel: BaseViewModel(), LifecycleObserver {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     state.value = state.value!!.copy(userPhone = it)
+                    state.value = state.value!!.copy(initialLoading = false)
                     Log.d("USER", state.value.toString())
                 }, {
                     Log.e("NOM", it.message)
@@ -152,6 +170,7 @@ data class HomeState(
     var userName: String ="",
     var userNIU: String ="",
     var userPhone: String = "",
+    var userRole: String = "",
     var courses: LiveData<List<Course>>? = null,
     var initialLoading: Boolean = false,
     var contentLoading: Boolean = false

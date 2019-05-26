@@ -25,6 +25,7 @@ class FireAuth {
     val db = FirebaseFirestore.getInstance()
     var userNIU: String = ""
     var userPhone: String = ""
+    var userRole: String = ""
 
     fun signInWithGoogle(account: GoogleSignInAccount): Completable {
         return Completable.create { e ->
@@ -40,6 +41,24 @@ class FireAuth {
                 .addOnFailureListener { it.printStackTrace() }
         }
     }
+
+    fun getUserRole(userId: String): Single<String> {
+        return Single.create { e ->
+            db.collection("user")
+                .document(userId)
+                .get()
+                .addOnSuccessListener {
+                    val role = it["role"].toString()
+                    e.onSuccess(role)
+                    userRole = role
+                }
+                .addOnFailureListener {
+                    e.onError(Throwable(it.message))
+                }
+        }
+    }
+
+
 
     fun getUserNIU(userId: String): Single<String> {
         return Single.create { e ->

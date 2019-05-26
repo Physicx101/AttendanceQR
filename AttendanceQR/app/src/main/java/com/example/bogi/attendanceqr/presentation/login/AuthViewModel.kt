@@ -22,7 +22,6 @@ class AuthViewModel : BaseViewModel() {
         signInLoading.value = false
     }
 
-    fun getState() = state
     fun getCurrentUser() = user
     fun getSignInLoading() = signInLoading
 

@@ -27,14 +27,8 @@ class MainActivity : AppCompatActivity() {
         initServiceLifecycle()
         if (FireAuth.instance.getCurrentUser() == null) userNotLogin() else {
             userHasCheckIn()
-            homeViewModel.getCheckIn()
+            //homeViewModel.getCheckIn()
         }
-       /* homeViewModel.getState().observe(this, Observer {
-            if (!it.initialLoading && it.checkIn == null && FireAuth.instance.getCurrentUser() != null) {
-                openScanner()
-            }
-            else if(it.checkIn != null) userHasCheckIn()
-        })*/
     }
 
     fun userNotLogin() {
