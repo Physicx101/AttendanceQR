@@ -1,4 +1,4 @@
-package com.nomnom.nomnomuser.presentation.common
+package com.example.bogi.attendanceqr.presentation.common
 
 import android.os.Bundle
 import android.view.LayoutInflater

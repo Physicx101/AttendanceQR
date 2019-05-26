@@ -1,16 +1,17 @@
-package com.nomnom.nomnomuser.presentation.login
+package com.example.bogi.attendanceqr.presentation.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.bogi.attendanceqr.R
+import com.example.bogi.attendanceqr.data.firebase.FireAuth
+import com.example.bogi.attendanceqr.presentation.common.BaseFragment
+import com.example.bogi.attendanceqr.presentation.home.HomeViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.common.api.ApiException
-import com.nomnom.nomnomuser.presentation.MainActivity
-import com.nomnom.nomnomuser.R
-import com.nomnom.nomnomuser.data.firebase.FireAuth
-import com.nomnom.nomnomuser.presentation.menu.MenuViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment: BaseFragment(R.layout.fragment_login) {
@@ -18,15 +19,15 @@ class LoginFragment: BaseFragment(R.layout.fragment_login) {
     private val authViewModel by lazy {
         ViewModelProviders.of(activity!!)[AuthViewModel::class.java]
     }
-    private val menuViewModel by lazy {
-        ViewModelProviders.of(activity!!)[MenuViewModel::class.java]
+    private val homeViewModel by lazy {
+        ViewModelProviders.of(activity!!)[HomeViewModel::class.java]
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         authViewModel.getCurrentUser().observe(this, Observer {
             it?.let {
-                menuViewModel.getCheckIn()
+                homeViewModel.getCheckIn()
                 //activity!!.onBackPressed()
             }
         })

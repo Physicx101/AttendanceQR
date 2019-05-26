@@ -1,4 +1,4 @@
-package com.nomnom.nomnomuser.presentation.common
+package com.example.bogi.attendanceqr.presentation.common
 
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.module.AppGlideModule

@@ -1,4 +1,4 @@
-package com.nomnom.nomnomuser.presentation.common
+package com.example.bogi.attendanceqr.presentation.common
 
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
