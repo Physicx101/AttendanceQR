@@ -257,7 +257,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/spacing_medium"
-                    android:layout_marginTop="@dimen/spacing_medium"
                     android:visibility="visible"
                     app:cardElevation="0dp">
 
@@ -289,19 +288,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/light_green_500"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_map_marker"/>
+                                    app:srcCompat="@drawable/ic_calendar_blank"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="FRIENDS"
+                                    android:text="Kuliah"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -317,19 +317,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/yellow_600"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_account_outline"/>
+                                    app:srcCompat="@drawable/ic_file_outline"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="GROUPS"
+                                    android:text="Ujian"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -344,19 +345,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/purple_400"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_map_marker"/>
+                                    app:srcCompat="@drawable/ic_newspaper"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="NEARABY"
+                                    android:text="Berita"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -371,19 +373,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/blue_400"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_account_outline"/>
+                                    app:srcCompat="@drawable/ic_school"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="MOMENT"
+                                    android:text="Alumni"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -410,19 +413,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/indigo_300"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_account_outline"/>
+                                    app:srcCompat="@drawable/ic_book_open_variant"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="ALBUMS"
+                                    android:text="E-Learning"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
 
                         </LinearLayout>
 
@@ -438,19 +442,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/green_500"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_map_marker"/>
+                                    app:srcCompat="@drawable/ic_cash"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="LIKES"
+                                    android:text="UKT"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -465,19 +470,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/light_green_400"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_account_outline"/>
+                                    app:srcCompat="@drawable/ic_laptop"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="ARTICLES"
+                                    android:text="SIA"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -492,19 +498,20 @@
                                     android:layout_height="wrap_content"
                                     android:clickable="true"
                                     android:tint="@android:color/white"
-                                    app:backgroundTint="@color/orange_300"
+                                    app:backgroundTint="@color/colorPrimary"
                                     app:elevation="0dp"
                                     app:fabSize="mini"
                                     app:rippleColor="@android:color/white"
-                                    app:srcCompat="@drawable/ic_map_marker"/>
+                                    app:srcCompat="@drawable/ic_account_group_outline"/>
 
                             <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="@dimen/spacing_medium"
-                                    android:text="REVIEWS"
+                                    android:text="Mahasiswa"
+                                    android:fontFamily="@font/circular_medium"
                                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
-                                    android:textColor="@color/grey_40"/>
+                                    android:textColor="@color/black"/>
                         </LinearLayout>
 
                     </LinearLayout>
