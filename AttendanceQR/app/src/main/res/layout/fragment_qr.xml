@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/bt_close_qr"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_close"
+            android:tint="@color/white"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="4dp"
+    />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/card_qr"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent=".9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/img_logo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_command"
+                    app:layout_constraintVertical_bias=".25"
+                    app:layout_constraintWidth_percent=".25"
+                    app:layout_constraintDimensionRatio="13:10"
+                    android:src="@drawable/ugm_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+            <TextView
+                    android:id="@+id/text_command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/img_logo"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/text_course_name"
+                    android:text="Mohon Scan QR di bawah"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/circular_medium"
+                    android:layout_marginTop="20dp"
+            />
+
+            <TextView
+                    android:id="@+id/text_course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/text_command"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:text="Manajemen Proyek Teknologi Informasi"
+                    android:textSize="18sp"
+                    android:maxLines="2"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/circular_medium"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/label_course_time"/>
+
+            <TextView
+                    android:id="@+id/label_order_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/text_course_name"
+                    app:layout_constraintLeft_toLeftOf="@id/text_course_name"
+                    android:text="Order no: "
+                    android:textSize="18sp"
+                    android:textColor="@color/mediumGray"
+                    android:fontFamily="@font/circular_medium"
+                    android:layout_marginTop="20dp"
+            />
+
+            <TextView
+                    android:id="@+id/label_course_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu:"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/text_course_name"
+                    app:layout_constraintLeft_toLeftOf="@id/text_course_name"
+                    android:textSize="16sp"
+                    android:textColor="@color/mediumGray"
+                    android:fontFamily="@font/circular_book"
+                    tools:layout_editor_absoluteY="100dp" tools:layout_editor_absoluteX="20dp"/>
+
+            <TextView
+                    android:id="@+id/text_course_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/label_course_time"
+                    app:layout_constraintLeft_toRightOf="@id/label_course_time"
+                    android:layout_marginStart="10dp"
+                    tools:text="14:30 - 17:00"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/circular_medium"
+            />
+
+            <TextView
+                    android:id="@+id/label_course_lecturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/label_course_time"
+                    app:layout_constraintLeft_toLeftOf="@id/text_course_name"
+                    android:text="Dosen:"
+                    android:textSize="16sp"
+                    android:textColor="@color/mediumGray"
+                    android:fontFamily="@font/circular_book"
+                    android:layout_marginTop="10dp"
+            />
+
+            <TextView
+                    android:id="@+id/text_course_lecturer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/label_course_lecturer"
+                    app:layout_constraintLeft_toRightOf="@id/label_course_lecturer"
+                    android:layout_marginStart="10dp"
+                    tools:text="Sigit Priyanta"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/circular_medium"
+            />
+
+            <ImageView
+                    android:id="@+id/img_qrcode"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintWidth_percent=".6"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:src="@color/lightGray"
+                    app:layout_constraintTop_toBottomOf="@id/label_course_lecturer"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="20dp"
+            />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
