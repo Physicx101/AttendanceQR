@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_percent=".6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <ImageView
+            android:id="@+id/img_logo_login"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".25"
+            app:layout_constraintWidth_percent=".65"
+            app:layout_constraintDimensionRatio="13:10"
+            android:src="@drawable/ugm_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+    <TextView
+            android:id="@+id/text_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang di Aplikasi Absensi UGM"
+            app:layout_constraintTop_toBottomOf="@id/img_logo_login"
+            app:layout_constraintBottom_toTopOf="@id/bt_login_google"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/circular_medium" app:layout_constraintHorizontal_bias="0.0"/>
+
+
+    <TextView
+            android:id="@+id/bt_login_google"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="24dp"
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="24dp"
+            android:text="Login with email UGM"
+            app:layout_constraintTop_toBottomOf="@id/text_welcome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".7"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_rounded_button"
+            android:fontFamily="@font/roboto_medium"/>
+
+    <FrameLayout
+            android:id="@+id/loading_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6F000000"
+            android:visibility="gone"
+    >
+        <ProgressBar
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
