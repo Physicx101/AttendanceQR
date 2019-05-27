@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "926040103560-cm0hp5fps9i4v5la10u0b37l5ukjk6j5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bogi.attendanceqr",
+            "certificate_hash": "1cca6cada9d1ac7ad8d464c8681f8628a7e41d3a"
+          }
+        },
+        {
           "client_id": "926040103560-1cpqlvgghia2c6iabbqkblnur2uejne0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

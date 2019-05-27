@@ -41,10 +41,11 @@ class GenerateQrFragment : BaseFragment(R.layout.fragment_qr) {
     }
 
     private fun setupUI(course: Course) {
-        text_course_name.text = course?.name
-        text_course_lecturer.text = course?.lecturer
-        text_course_time.text = course?.time
+        val qrText = "simaster/"
+        text_course_name.text = course.name
+        text_course_lecturer.text = course.lecturer
+        text_course_time.text = course.time
         val dp = 250f
         val px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.displayMetrics).toInt()
-        img_qrcode.setImageBitmap(QRCode.from(course.id).withSize(px, px).bitmap())}
+        img_qrcode.setImageBitmap(QRCode.from(qrText + course.id).withSize(px, px).bitmap())}
 }
