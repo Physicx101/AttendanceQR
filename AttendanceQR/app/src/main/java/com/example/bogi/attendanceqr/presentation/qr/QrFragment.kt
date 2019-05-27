@@ -93,7 +93,7 @@ class QrFragment : Fragment(), ZXingScannerView.ResultHandler {
                 if (!result.text.startsWith("simaster/")) wrongQRCode()
                 else {
                     val data = result.text.split("/")
-                    if (data.size != 2 || data[1] == courseId) wrongQRCode()
+                    if (data.size != 2 || data[1] != courseId) wrongQRCode()
                     else {
                         val absen = Absen(courseId, userName, userNIU, dateInString, "")
                         homeViewModel.getState().value = homeViewModel.getState().value!!.copy(initialLoading = true)
