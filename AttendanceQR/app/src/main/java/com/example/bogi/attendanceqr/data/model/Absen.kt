@@ -5,5 +5,6 @@ data class Absen(
     val userName: String,
     val userNIU: String,
     val time: String,
+    val status: String,
     val checkout: String? = null
 )

@@ -32,17 +32,14 @@ class CourseListDosenAdapter(val onClick: (Course) -> Unit) :
         private var day = dayFormat.format(calendar.time)
 
         fun bind(data: Course, pos: Int) = with(itemView) {
-            if (day == data.day) {
-                bt_absen.visibility = View.VISIBLE
-            } else {
-                bt_absen.visibility = View.INVISIBLE
-            }
+            bt_absen.visibility = View.INVISIBLE
             text_course.text = data.name
             text_lecturer.text = data.lecturer
             text_time.text = data.time
             text_room.text = data.room
-            bt_absen.text = "Mulai Kelas"
-            bt_absen.setOnClickListener { onClick(data) }
+            course_layout.setOnClickListener { onClick(data) }
+            //bt_absen.text = "Mulai Kelas"
+            //bt_absen.setOnClickListener { onClick(data) }
         }
     }
 

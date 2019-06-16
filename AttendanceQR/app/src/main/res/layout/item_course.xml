@@ -4,8 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:id="@+id/constraintLayout">
+        android:layout_width="match_parent">
 
     <com.google.android.material.card.MaterialCardView
             app:cardElevation="0dp"
@@ -26,7 +25,7 @@
             android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout_item_promotion"
+                android:id="@+id/course_layout"
                 android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
@@ -55,6 +54,7 @@
             <View
                     android:id="@+id/ic_lecturer"
                     android:layout_width="18dp"
+                    android:visibility="gone"
                     android:layout_height="18dp"
                     android:background="@drawable/ic_account_outline"
                     android:backgroundTint="@color/colorPrimary"
@@ -72,6 +72,7 @@
                     app:layout_constraintLeft_toRightOf="@id/ic_lecturer"
                     app:layout_constraintBottom_toBottomOf="@id/ic_lecturer"
                     android:maxLines="1"
+                    android:visibility="gone"
                     android:ellipsize="end"
                     android:text="Nama Dosen"
                     android:textSize="14sp"

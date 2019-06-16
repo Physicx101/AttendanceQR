@@ -35,12 +35,13 @@ class FireCourse {
                 .document(absen.courseId)
                 .collection("mahasiswa")
                 .document(FireAuth.instance.getCurrentUser()!!.uid)
-                .set(
+                .update(
                     mapOf(
                         Pair("id", FireAuth.instance.getCurrentUser()!!.uid),
                         Pair("studentName", absen.userName),
                         Pair("studentNIU", absen.userNIU),
-                        Pair("time", absen.time)
+                        Pair("time", absen.time),
+                        Pair("status", "Masuk")
                     )
                 )
                 .addOnSuccessListener { e.onComplete() }

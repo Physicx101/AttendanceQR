@@ -32,11 +32,11 @@ class CourseListAdapter(val onClick: (Course) -> Unit) :
         private var day = dayFormat.format(calendar.time)
 
         fun bind(data: Course, pos: Int) = with(itemView) {
-            if (day == data.day) {
+            /*if (day == data.day) {
                 bt_absen.visibility = View.VISIBLE
             } else {
                 bt_absen.visibility = View.INVISIBLE
-            }
+            }*/
             text_course.text = data.name
             text_lecturer.text = data.lecturer
             text_time.text = data.time

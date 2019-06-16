@@ -1,0 +1,84 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:id="@+id/frameLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back"
+                    android:tint="@color/white"
+                    android:padding="6dp"
+            />
+
+            <TextView
+                    android:id="@+id/label_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/bt_back"
+                    app:layout_constraintBottom_toBottomOf="@id/bt_back"
+                    app:layout_constraintLeft_toRightOf="@id/bt_back"
+                    android:text="Daftar Mahasiswa"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/circular_medium"
+            />
+
+            <View
+                    android:id="@+id/b_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:layout_constraintTop_toBottomOf="@id/bt_back"
+                    android:background="@color/lightGray"
+                    android:layout_marginTop="20dp"
+            />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/btn_start_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="36dp"
+            style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+            android:text="Mulai Kelas"
+            android:backgroundTint="@color/colorAccent"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_course_students"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

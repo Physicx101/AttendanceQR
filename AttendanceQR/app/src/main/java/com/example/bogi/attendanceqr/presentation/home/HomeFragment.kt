@@ -1,15 +1,7 @@
 package com.example.bogi.attendanceqr.presentation.home
 
-import android.Manifest
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,10 +12,9 @@ import com.example.bogi.attendanceqr.data.model.Course
 import com.example.bogi.attendanceqr.presentation.MainActivity
 import com.example.bogi.attendanceqr.presentation.common.BaseFragment
 import com.example.bogi.attendanceqr.presentation.common.GlideApp
+import com.example.bogi.attendanceqr.presentation.home.course.CourseFragment
 import com.example.bogi.attendanceqr.presentation.home.course.CourseListAdapter
 import com.example.bogi.attendanceqr.presentation.home.course.CourseListDosenAdapter
-import com.example.bogi.attendanceqr.presentation.login.AuthViewModel
-import com.example.bogi.attendanceqr.presentation.qr.GenerateQrFragment
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -103,16 +94,14 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
     private fun openCourseDetails(): (Course) -> Unit = {
         homeViewModel.getState().value = homeViewModel.getState().value!!.copy(userName = user.displayName!!)
         homeViewModel.getState().value = homeViewModel.getState().value!!.copy(course = it)
-        Log.d("COURSE", it.toString())
         (activity as MainActivity).openScanner()
     }
 
     private fun openCourseDosenDetails(): (Course) -> Unit = {
         homeViewModel.getState().value = homeViewModel.getState().value!!.copy(course = it)
-        Log.d("COURSE", it.toString())
         activity!!.supportFragmentManager
             .beginTransaction()
-            .add(R.id.container, GenerateQrFragment())
+            .add(R.id.container, CourseFragment())
             .addToBackStack(null)
             .commit()
     }

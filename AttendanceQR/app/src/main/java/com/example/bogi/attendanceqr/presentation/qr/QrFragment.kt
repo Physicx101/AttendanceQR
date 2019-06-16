@@ -17,14 +17,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.bogi.attendanceqr.R
 import com.example.bogi.attendanceqr.data.model.Absen
-import com.example.bogi.attendanceqr.data.model.Course
 import com.example.bogi.attendanceqr.presentation.MainActivity
 import com.example.bogi.attendanceqr.presentation.home.HomeViewModel
 import com.example.bogi.attendanceqr.util.getCurrentDateTime
 import com.example.bogi.attendanceqr.util.toString
 import com.google.zxing.Result
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.dialog_order_loading.*
 import me.dm7.barcodescanner.zxing.ZXingScannerView
 
@@ -86,8 +83,10 @@ class QrFragment : Fragment(), ZXingScannerView.ResultHandler {
         val dateInString = date.toString("yyyy/MM/dd HH:mm:ss")
 
         if (rawResult != null) {
-            loadingDialog.show()
-            loadingDialog.label_dialog_loading.text = "Loading ..."
+            if(activity!!.isFinishing) {
+                loadingDialog.show()
+                loadingDialog.label_dialog_loading.text = "Loading ..."
+            }
             rawResult.let { result ->
                 Log.d("ABSENQR", result.toString())
                 if (!result.text.startsWith("simaster/")) wrongQRCode()
